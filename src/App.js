@@ -1,9 +1,10 @@
 import './App.css';
+import AppRoutes from './routes/Routes';
 
 function App() {
   return (
     <div className="App">
-        <h1 className='w-full bg-indigo-300'>Hello</h1>
+        <AppRoutes/>
     </div>
   );
 }
