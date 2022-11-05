@@ -1,5 +1,6 @@
 import './App.css';
 import AppRoutes from './routes/Routes';
+import {ProductProvider} from "./context/ProductContext";
 
 function App() {
   return (
