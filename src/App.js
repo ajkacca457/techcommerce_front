@@ -1,11 +1,12 @@
 import './App.css';
-import AppRoutes from './routes/Routes';
-import {ProductProvider} from "./context/ProductContext";
+import Container from './components/Container';
+import Footer from './components/Footer';
 
 function App() {
   return (
-    <div className="App">
-        <AppRoutes/>
+    <div className="App min-h-[100vh] flex flex-col justify-between">
+        <Container/>
+        <Footer/>
     </div>
   );
 }
