@@ -3,7 +3,7 @@ import Hero from '../components/Hero';
 
 const Home = () => {
   return (
-    <div className='w-full text-gray-600'>
+    <div className='w-full'>
       <Hero/>
     </div>
   )
