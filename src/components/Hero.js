@@ -1,9 +1,9 @@
 import React from 'react'
 import HeroImg from "../images/hero1.jpg"
 
-const Hero = () => {
+const Hero = ({align}) => {
   return (
-    <div className='grid grid-cols-2 place-items-center p-8'>
+    <div className='grid grid-cols-2 place-items-center p-8 gap-x-6'>
         <div className='col-span-1 text-left'>
             <h3> Here will be subheading</h3>
             <h1>Here will the heading for Title</h1>
@@ -11,8 +11,8 @@ const Hero = () => {
             <h3>Price in $</h3>
             <button className='bg-orange-400 px-3 py-1 text-white'>Add to cart</button>
         </div> 
-        <img src={HeroImg} className='col-span-1' alt="heroimage"/>
-    </div>
+        <img src={HeroImg} className={`${align?"col-span-1 order-first":"col-span-1 order-last"}`} alt="heroimage"/>
+    </div> 
     
   )
 }

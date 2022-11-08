@@ -10,7 +10,7 @@ const initialState= {
 
 const ProductProvider=({children})=>{
 return(
-<ProductContext.Provider store={initialState}>
+<ProductContext.Provider value={initialState}>
     {children}
 </ProductContext.Provider>
 )
