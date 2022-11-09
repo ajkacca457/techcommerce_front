@@ -1,19 +1,27 @@
 import axios from "axios";
 import { useContext, useEffect, useReducer } from "react";
 import {createContext} from "react";
-import { GET_PRODUCTS_BEGINS,GET_PRODUCTS_SUCCESS,GET_PRODUCTS_ERROR } from "./actions";
+import { BaseURL } from "../utils/utils";
+import { 
+    GET_PRODUCTS_BEGINS,
+    GET_PRODUCTS_SUCCESS, 
+    GET_PRODUCTS_ERROR,
+    GET_SINGLE_PRODUCT_BEGINS,
+    GET_SINGLE_PRODUCT_SUCCESS,
+    GET_SINGLE_PRODUCT_ERROR } from "./actions";
 import ProductReducer from "./reducers/ProductReducer";
 
 
 const ProductContext= createContext();
 
-const roolUrl="https://techcommerce-api.netlify.app/api/products";
-
 const initialState= {
     products: [],
     featured:[],
     loading: false,
-    error: false
+    error: false,
+    single_loading:false,
+    single_error:false,
+    single_product: {}
 }
 
 const ProductProvider=({children})=>{
@@ -29,15 +37,26 @@ const ProductProvider=({children})=>{
         } catch (error) {
             dispatch({type:GET_PRODUCTS_ERROR})
         }
-}    
+    } 
+    
+    const fetchSingleProduct=async(url)=>{
+        dispatch({type:GET_SINGLE_PRODUCT_BEGINS});
+        try {
+         const response=await axios.get(url);
+         const result= response.data;
+         dispatch({type:GET_SINGLE_PRODUCT_SUCCESS,payload:result})   
+        } catch (error) {
+          dispatch({type:GET_SINGLE_PRODUCT_ERROR})  
+        }
+    }
 
 useEffect(()=>{
-    fetchProducts(roolUrl);
+    fetchProducts(`${BaseURL}/api/products`);
 },[])
 
 
 return(
-<ProductContext.Provider value={{...state}}>
+<ProductContext.Provider value={{...state, fetchSingleProduct}}>
     {children}
 </ProductContext.Provider>
 )

@@ -1,13 +1,14 @@
 import React from 'react'
 import { useProductContext } from '../context/ProductContext'
 import FeaturedCard from './FeaturedCard';
+import Loading from './Loading';
 
 const Featured = () => {
   const {featured,loading, error}= useProductContext();
 
   if(loading) {
     return(
-      <div>Loading...</div>
+      <Loading/>
     )
   }
   if(error) {
@@ -18,7 +19,7 @@ const Featured = () => {
   return (
     <div className='grid grid-cols-6 gap-x-[10px]'>
         {featured.slice(0,3).map((item)=>{
-          return <FeaturedCard key={item.id} {...item} className="col-span-2"/>
+          return <FeaturedCard key={item.id} {...item}/>
         })}
     </div>
   )
