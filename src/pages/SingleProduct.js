@@ -3,9 +3,8 @@ import { useParams } from 'react-router-dom'
 
 const SingleProduct = () => {
     const {id }= useParams();
-    console.log(useParams());
   return (
-    <div>SingleProduct</div>
+    <div>{id}</div>
   )
 }
 

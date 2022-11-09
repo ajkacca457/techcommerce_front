@@ -17,18 +17,18 @@ const initialState= {
 }
 
 const ProductProvider=({children})=>{
-    const [state,dispatch]= useReducer(ProductReducer,initialState);
-    console.log(state);
 
-const fetchProducts= async (url)=>{
-    dispatch({type:GET_PRODUCTS_BEGINS});
-    try {
-        const response= await axios.get(url);
-        const results= response.data;
-        dispatch({type:GET_PRODUCTS_SUCCESS,payload:results})
-    } catch (error) {
-        dispatch({type:GET_PRODUCTS_ERROR})
-    }
+    const [state,dispatch]= useReducer(ProductReducer,initialState);
+
+    const fetchProducts= async (url)=>{
+        dispatch({type:GET_PRODUCTS_BEGINS});
+        try {
+            const response= await axios.get(url);
+            const results= response.data;
+            dispatch({type:GET_PRODUCTS_SUCCESS,payload:results})
+        } catch (error) {
+            dispatch({type:GET_PRODUCTS_ERROR})
+        }
 }    
 
 useEffect(()=>{
