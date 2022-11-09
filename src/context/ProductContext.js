@@ -37,7 +37,7 @@ useEffect(()=>{
 
 
 return(
-<ProductContext.Provider value={initialState}>
+<ProductContext.Provider value={{...state}}>
     {children}
 </ProductContext.Provider>
 )
