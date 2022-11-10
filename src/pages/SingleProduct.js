@@ -5,21 +5,26 @@ import {useProductContext} from "../context/ProductContext";
 import  {BaseURL} from "../utils/utils";
 
 const SingleProduct = () => {
-    const {id }= useParams();
-    const { fetchSingleProduct, single_product, single_loading, single_error }= useProductContext();
-    const {createdTime,fields:{Category,Company,Description,Featured,FreeShipping,Image,Name,Price,Rating,Stock},id:ProductId}= single_product;
+    
+  const {id }= useParams();
+    
     useEffect(()=>{
       fetchSingleProduct(`${BaseURL}/api/products?id=${id}`);
-      console.log(single_product);
     },[id])
 
+    const { fetchSingleProduct, single_product, single_loading, single_error }= useProductContext();
+    console.log(single_product,single_loading,single_error);
+    const {createdTime,fields,id:ProductId}= single_product;
+    
     if(single_loading) {
       return(<Loading/>)
     }
     if(single_error) {
       return (<div>There is no product with this id</div>)
     }
-  return (
+    if(fields) {
+      const {Category,Company,Description,Featured,FreeShipping,Image,Name,Price,Rating,Stock}=fields;
+    return (
     <div>
       {Image.map((item,index)=> {
         return(<img src={item.url} key={index}  className="w-[150px] h-[100px]"/>)
@@ -32,9 +37,10 @@ const SingleProduct = () => {
       <p>{FreeShipping && "Free Shipping Available"}</p>
       <p>{Price}</p>
       <p>{Rating}</p>
-      <p>{Stock>0 ? `${Stock} Available`:"Not Available"}</p>
+      <p>{Stock>0 ? `${Stock} Available`:"Not Available"}</p> 
     </div>
   )
+}
 }
 
 export default SingleProduct

@@ -21,7 +21,7 @@ const initialState= {
     error: false,
     single_loading:false,
     single_error:false,
-    single_product: {}
+    single_product:{}
 }
 
 const ProductProvider=({children})=>{

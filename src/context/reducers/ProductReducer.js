@@ -25,20 +25,19 @@ const ProductReducer=(state,action)=> {
                 error:true
             }
         case GET_SINGLE_PRODUCT_BEGINS:
-            return  {...state, single_loading:true};
+            return  {...state, single_loading:true, single_error:false};
         case GET_SINGLE_PRODUCT_SUCCESS:
             return {
                 ...state,
-                single_loading:false,
-                single_product:action.payload
+                single_product:action.payload,
+                single_loading:false
             }
         case GET_SINGLE_PRODUCT_ERROR:
             return {
                 ...state,
+                single_loading:false,
                 single_error:true
             }
-        default:
-            return {...state}
     }
 
 }
