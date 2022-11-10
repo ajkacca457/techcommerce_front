@@ -14,7 +14,6 @@ const SingleProduct = () => {
     },[id])
 
     const { fetchSingleProduct, single_product, single_loading, single_error }= useProductContext();
-    console.log(single_product,single_loading,single_error);
     const {createdTime,fields,id:ProductId}= single_product;
     
     if(single_loading) {

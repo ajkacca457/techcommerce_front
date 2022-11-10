@@ -5,7 +5,6 @@ const AddToCart = ({stock}) => {
     const [amount,setAmount]=useState(1);
 
     const increase=()=> {
-        console.log("working!");
         setAmount((oldAmount)=>{
             let tempAmount= oldAmount+1;
             if(tempAmount>stock) {
