@@ -3,6 +3,7 @@ import { useParams } from 'react-router-dom'
 import Loading from "../components/Loading"
 import {useProductContext} from "../context/ProductContext";
 import  {BaseURL} from "../utils/utils";
+import AddToCart from '../components/AddToCart';
 
 const SingleProduct = () => {
     
@@ -37,7 +38,7 @@ const SingleProduct = () => {
       <p>{FreeShipping && "Free Shipping Available"}</p>
       <p>{Price}</p>
       <p>{Rating}</p>
-      <p>{Stock>0 ? `${Stock} Available`:"Not Available"}</p> 
+      <div>{Stock>0 ? <AddToCart stock={Stock}/>:"No Available stock"}</div> 
     </div>
   )
 }
