@@ -3,15 +3,24 @@ import Filter from '../components/Filter'
 import ListView from '../components/ListView'
 import GridView from '../components/GridView'
 import { useFilterContext } from '../context/FilterContext'
+import Sorting from '../components/Sorting'
+import { useProductContext } from '../context/ProductContext'
+import Loading from '../components/Loading';
 
 const Products = () => {
-  const {filtered_products}= useFilterContext();
+  const {loading}= useProductContext();
+  const {filtered_products, list_view}= useFilterContext();
+  
+  if(loading) {
+    return(<Loading/>)
+  }
+
   return (
     <div className='grid grid-cols-5 gap-x-[10px]'>
       <Filter className="col-span-1"/>
       <div className='col-span-4 bg-red-400'>
-        <ListView products={filtered_products}/>
-        <GridView products={filtered_products}/>
+        <Sorting/>
+        {list_view ? <ListView products={filtered_products}/>: <GridView products={filtered_products}/>}
       </div>
     </div>
   )
