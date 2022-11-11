@@ -11,6 +11,7 @@ const GridView = ({products}) => {
             <div>
                 <p>{item.Name}</p>
                 <p>{item.Company}</p>
+                <p>{item.Price}</p>
                 <NavLink to={`/products/${item.id}`}>See Product</NavLink>    
             </div>
             </div>
