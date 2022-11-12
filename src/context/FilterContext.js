@@ -9,7 +9,16 @@ const initialState= {
     all_products: [],
     filtered_products:[],
     list_view:false,
-    sort:"price-lowest"
+    sort:"price-lowest",
+    filters:{
+        searchtext:"",
+        company:"all",
+        category:"all",
+        minPrice:0,
+        maxPrice:0,
+        price:0,
+        freeshipping:false
+    }
 }
 
 

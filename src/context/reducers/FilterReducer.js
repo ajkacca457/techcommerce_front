@@ -3,10 +3,15 @@ import { LOAD_PRODUCTS, LIST_VIEW_ACTIVE, GRID_VIEW_ACTIVE, UPDATE_SORT, FILTER_
 const FilterReducer=(state,action)=>{
     switch (action.type) {
         case LOAD_PRODUCTS:
+        const maxPriceArr=action.payload.map(item=>item.Price);
+        const max_Price=Math.max(...maxPriceArr);
         return {
             ...state,
             all_products:[...action.payload],
-            filtered_products:[...action.payload]
+            filtered_products:[...action.payload],
+            filters:{...state.filters,
+                maxPrice:max_Price,
+                price:max_Price}
         }
         case LIST_VIEW_ACTIVE:
             return {
