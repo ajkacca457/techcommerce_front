@@ -1,4 +1,4 @@
-import { LOAD_PRODUCTS, LIST_VIEW_ACTIVE, GRID_VIEW_ACTIVE, UPDATE_SORT, FILTER_PRODUCTS } from "../actions";
+import { LOAD_PRODUCTS, LIST_VIEW_ACTIVE, GRID_VIEW_ACTIVE, UPDATE_SORT, FILTER_PRODUCTS, UPDATE_STATE_FILTERS, SHOW_FILTERED_PRODUCTS } from "../actions";
 
 const FilterReducer=(state,action)=>{
     switch (action.type) {
@@ -57,6 +57,17 @@ const FilterReducer=(state,action)=>{
             }
             return{
                 ...state,filtered_products:sorted_products
+            }
+        case UPDATE_STATE_FILTERS:
+            const {name,value}= action.payload;
+            return {
+                ...state,
+                filters: {...state.filters, [name]:value}
+            }
+        case SHOW_FILTERED_PRODUCTS:
+            console.log("filtering working");
+            return {
+                ...state
             }
     }
 

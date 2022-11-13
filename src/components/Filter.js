@@ -32,7 +32,11 @@ const Filter = () => {
             })}
           </select>
         </div>
-        
+
+        <div className="form-group my-4">
+          <label htmlFor="price">Current price ${price}</label>
+          <input type="range" name="price" value={price} min={minPrice} max={maxPrice} onChange={updateFilters} />
+        </div>
       </form>
 
     </>
