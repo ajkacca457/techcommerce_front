@@ -65,9 +65,27 @@ const FilterReducer=(state,action)=>{
                 filters: {...state.filters, [name]:value}
             }
         case SHOW_FILTERED_PRODUCTS:
-            console.log("filtering working");
+            const {all_products,filters:{searchtext,category,company,freeshipping,price}}= state;
+            let tempProducts=[...all_products];
+            if (searchtext) {
+                tempProducts=tempProducts.filter((item)=>item.Name.toLowerCase().startsWith(searchtext))
+            }
+            if(category!=="all") {
+                tempProducts=tempProducts.filter((item)=>item.Category===category)
+            }
+            if(company!=="all") {
+                tempProducts=tempProducts.filter((item)=>item.Company===company)
+            }
+            if(freeshipping) {
+                tempProducts=tempProducts.filter((item)=>item.FreeShipping===freeshipping)
+            }
+            if(price) {
+                tempProducts=tempProducts.filter((item)=>item.Price<=price)
+            }
+
             return {
-                ...state
+                ...state,
+                filtered_products:tempProducts
             }
         case CLEAR_ALL_FILTER:
             return {
