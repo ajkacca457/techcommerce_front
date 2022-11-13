@@ -1,7 +1,7 @@
 import { createContext, useContext, useEffect, useReducer } from "react";
 import { useProductContext } from "./ProductContext";
 import FilterReducer from "./reducers/FilterReducer";
-import { LOAD_PRODUCTS, LIST_VIEW_ACTIVE, GRID_VIEW_ACTIVE, UPDATE_SORT, FILTER_PRODUCTS, UPDATE_STATE_FILTERS, SHOW_FILTERED_PRODUCTS } from "./actions";
+import { LOAD_PRODUCTS, LIST_VIEW_ACTIVE, GRID_VIEW_ACTIVE, UPDATE_SORT, FILTER_PRODUCTS, UPDATE_STATE_FILTERS, SHOW_FILTERED_PRODUCTS,CLEAR_ALL_FILTER } from "./actions";
 
 const FilterContext=createContext();
 
@@ -59,8 +59,13 @@ export const FilterProvider=({children})=> {
     dispatch({type:UPDATE_STATE_FILTERS,payload:{name,value}})
  }
 
+ const clearFilter=()=>{
+    dispatch({type:CLEAR_ALL_FILTER})
+}
+
+
     return (
-        <FilterContext.Provider value={{...state,changeDisplayList,changeDisplayGrid,sortUpdate,updateFilters}}>
+        <FilterContext.Provider value={{...state,changeDisplayList,changeDisplayGrid,sortUpdate,updateFilters, clearFilter}}>
             {children}
         </FilterContext.Provider>
     )

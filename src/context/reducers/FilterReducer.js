@@ -1,4 +1,4 @@
-import { LOAD_PRODUCTS, LIST_VIEW_ACTIVE, GRID_VIEW_ACTIVE, UPDATE_SORT, FILTER_PRODUCTS, UPDATE_STATE_FILTERS, SHOW_FILTERED_PRODUCTS } from "../actions";
+import { LOAD_PRODUCTS, LIST_VIEW_ACTIVE, GRID_VIEW_ACTIVE, UPDATE_SORT, FILTER_PRODUCTS, UPDATE_STATE_FILTERS, SHOW_FILTERED_PRODUCTS, CLEAR_ALL_FILTER } from "../actions";
 
 const FilterReducer=(state,action)=>{
     switch (action.type) {
@@ -68,6 +68,18 @@ const FilterReducer=(state,action)=>{
             console.log("filtering working");
             return {
                 ...state
+            }
+        case CLEAR_ALL_FILTER:
+            return {
+                ...state,
+                filters:{
+                    ...state.filters,
+                    searchtext:"",
+                    company:"all",
+                    category:"all",
+                    price:state.filters.maxPrice,
+                    freeshipping:false
+                }
             }
     }
 

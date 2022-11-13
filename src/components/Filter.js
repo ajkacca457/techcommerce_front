@@ -3,7 +3,7 @@ import { useFilterContext } from '../context/FilterContext'
 import { getUniqueValues } from '../utils/utils';
 
 const Filter = () => {
-  const {all_products, filters: { category,company,freeshipping,maxPrice,minPrice,price,searchtext}, updateFilters}= useFilterContext();
+  const {all_products, filters: { category,company,freeshipping,maxPrice,minPrice,price,searchtext}, updateFilters, clearFilter}= useFilterContext();
   const categories= getUniqueValues(all_products,"Category");
   const companies= getUniqueValues(all_products,"Company");
 
@@ -42,6 +42,8 @@ const Filter = () => {
           <label htmlFor="freeshipping">Shipping</label>
           <input type="checkbox" name="freeshipping" checked={freeshipping} onChange={updateFilters} />
         </div>
+
+        <button className='bg-red-600 px-2 py-1 text-white hover:bg-red-400' onClick={clearFilter}>Clear Filters</button>
 
 
       </form>
