@@ -37,6 +37,13 @@ const Filter = () => {
           <label htmlFor="price">Current price ${price}</label>
           <input type="range" name="price" value={price} min={minPrice} max={maxPrice} onChange={updateFilters} />
         </div>
+
+        <div className="form-group my-4">
+          <label htmlFor="freeshipping">Shipping</label>
+          <input type="checkbox" name="freeshipping" checked={freeshipping} onChange={updateFilters} />
+        </div>
+
+
       </form>
 
     </>

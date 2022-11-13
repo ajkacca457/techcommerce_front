@@ -53,6 +53,9 @@ export const FilterProvider=({children})=> {
     if(name==="price") {
         value= Number(value);
     }
+    if(name==="freeshipping") {
+        value=e.target.checked;
+    }
     dispatch({type:UPDATE_STATE_FILTERS,payload:{name,value}})
  }
 
