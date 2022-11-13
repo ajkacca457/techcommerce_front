@@ -2,6 +2,10 @@ import React from 'react'
 import { NavLink } from 'react-router-dom'
 
 const ListView = ({products}) => {
+  if(products.length<=0) {
+    return <h1>Sorry.. no products available..</h1>
+  }
+  
   return (
     <div>
        {products && products.map((item)=>{
@@ -11,6 +15,7 @@ const ListView = ({products}) => {
             <div>
                 <p>{item.Name}</p>
                 <p>{item.Company}</p>
+                <p>{item.Price}</p>
                 <NavLink to={`/products/${item.id}`}>See More</NavLink>    
             </div>
             </div>
