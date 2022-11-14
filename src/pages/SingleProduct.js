@@ -14,7 +14,7 @@ const SingleProduct = () => {
     },[id])
 
     const { fetchSingleProduct, single_product, single_loading, single_error }= useProductContext();
-    const {createdTime,fields,id:ProductId}= single_product;
+    const {fields,id:productid}= single_product;
     
     if(single_loading) {
       return(<Loading/>)
@@ -37,7 +37,7 @@ const SingleProduct = () => {
       <p>{FreeShipping && "Free Shipping Available"}</p>
       <p>{Price}</p>
       <p>{Rating}</p>
-      <div>{Stock>0 ? <AddToCart stock={Stock}/>:"No Available stock"}</div> 
+      <div>{Stock>0 ? <AddToCart item={{Stock,productid,fields}}/>:"No Available stock"}</div> 
     </div>
   )
 }
