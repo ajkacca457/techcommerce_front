@@ -6,7 +6,7 @@ import uuid from 'react-uuid';
 
 const AddToCart = ({item:{Stock,productid,fields}}) => {
     const [amount,setAmount]=useState(1);
-    const { addItemsToCard }=useCartContext();
+    const { addItemsToCart }=useCartContext();
 
     const increase=()=> {
         setAmount((oldAmount)=>{
@@ -35,7 +35,7 @@ const AddToCart = ({item:{Stock,productid,fields}}) => {
         <TbSquarePlus size={25} onClick={increase}/>
     </div>
 
-    <button className='bg-orange-600 text-white flex mx-auto px-2 py-1 rounded-md my-2' onClick={(e)=>{addItemsToCard(productid,amount,fields)}}>
+    <button className='bg-orange-600 text-white flex mx-auto px-2 py-1 rounded-md my-2' onClick={(e)=>{addItemsToCart(productid,amount,fields)}}>
         <GrAddCircle size={25} className="text-white mr-2"/> Add to cart
     </button>
     

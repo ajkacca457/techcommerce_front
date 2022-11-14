@@ -1,4 +1,4 @@
-import { ADD_TO_CART } from "../actions";
+import { ADD_TO_CART, REMOVE_ITEM_FROM_CART, CALCULATE_TOTALS } from "../actions";
 
 const CartReducer = (state,action) => {
     switch (action.type) {
@@ -32,7 +32,33 @@ const CartReducer = (state,action) => {
             }
             return {...state}                
             break;
-        
+            
+            case REMOVE_ITEM_FROM_CART:
+            const {itemid}=action.payload;
+            let tempCart= state.cart_products.filter(item=> item.productid!==itemid)    
+            return {...state, cart_products:tempCart};
+
+            case CALCULATE_TOTALS:
+            // const {total_items,total_amount}= state.cart_products.reduce((total,item)=>{
+            //     const {amount,price}=item;
+            //     total.total_items += amount;
+            //     total.total_amount += amount*price;
+            //     return total;
+            // },
+            // {
+            //     total_items:0,
+            //     total_amount:0    
+            // })
+            let allItems= state.cart_products.reduce((total,item)=> {
+                return total+=item.amount
+            },0)
+
+            let grandTotal= state.cart_products.reduce((total,item)=>{
+                return total+= item.amount*item.price
+            },0)
+
+            return {...state, total_items:allItems, total_amount:grandTotal}
+
             default:
             break;
     }
