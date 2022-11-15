@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import {TbSquareMinus,TbSquarePlus} from "react-icons/tb"
 import {GrAddCircle} from "react-icons/gr"
 import { useCartContext } from '../context/CartContext'
-import uuid from 'react-uuid';
+import { NavLink } from 'react-router-dom'
 
 const AddToCart = ({item:{Stock,productid,fields}}) => {
     const [amount,setAmount]=useState(1);
@@ -35,9 +35,9 @@ const AddToCart = ({item:{Stock,productid,fields}}) => {
         <TbSquarePlus size={25} onClick={increase}/>
     </div>
 
-    <button className='bg-orange-600 text-white flex mx-auto px-2 py-1 rounded-md my-2' onClick={(e)=>{addItemsToCart(productid,amount,fields)}}>
+    <NavLink to="/cart" className='bg-orange-600 text-white flex mx-auto px-2 py-1 rounded-md my-2 w-fit h-fit' onClick={(e)=>{addItemsToCart(productid,amount,fields)}}>
         <GrAddCircle size={25} className="text-white mr-2"/> Add to cart
-    </button>
+    </NavLink>
     
     </div>
   )

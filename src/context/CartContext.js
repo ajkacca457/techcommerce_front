@@ -2,6 +2,7 @@ import React, { useContext, useEffect, useReducer } from 'react'
 import { createContext } from 'react'
 import CartReducer from './reducers/CartReducer';
 import { ADD_TO_CART,REMOVE_ITEM_FROM_CART,CALCULATE_TOTALS,CLEAR_CART } from './actions';
+import { useNavigate } from 'react-router-dom';
 
 const CartContext=createContext();
 
