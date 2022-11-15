@@ -5,7 +5,7 @@ const CartItem = ({name,image,amount,price,productid}) => {
   return (
     <div className='flex justify-between w-[80%] mx-auto my-4'>
         <div>
-            <img src={image} alt={name} className="w-[100px] h-[80px]"/>
+            {image && <img src={image} alt={name} className="w-[100px] h-[80px]"/>}
             <h3>{name}</h3>
         </div>   
 

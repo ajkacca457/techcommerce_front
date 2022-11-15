@@ -1,4 +1,4 @@
-import { ADD_TO_CART, REMOVE_ITEM_FROM_CART, CALCULATE_TOTALS } from "../actions";
+import { ADD_TO_CART, REMOVE_ITEM_FROM_CART, CALCULATE_TOTALS,CLEAR_CART } from "../actions";
 
 const CartReducer = (state,action) => {
     switch (action.type) {
@@ -58,7 +58,8 @@ const CartReducer = (state,action) => {
             },0)
 
             return {...state, total_items:allItems, total_amount:grandTotal}
-
+            case CLEAR_CART:
+            return {...state,cart_products:[]}
             default:
             break;
     }
