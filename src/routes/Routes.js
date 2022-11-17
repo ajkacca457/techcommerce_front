@@ -7,6 +7,7 @@ import SingleProduct from '../pages/SingleProduct';
 import Cart from '../pages/Cart';
 import Checkout from '../pages/Checkout';
 import Error from '../pages/Error';
+import ProtectedRoute from './ProtectedRoute';
 
 
 const AppRoutes = () => {
@@ -16,7 +17,10 @@ const AppRoutes = () => {
             <Route path='/' index element={<Home/>} />
             <Route path='about' element={<About/>} />
             <Route path='products' element={<Products/>} />
-            <Route path='checkout' element={<Checkout/>} />
+            <Route path='checkout' element={
+            <ProtectedRoute>
+            <Checkout/>
+            </ProtectedRoute>} />
             <Route path='cart' element={<Cart/>} />
             <Route path='products/:id' element={<SingleProduct/>} />
             <Route path='*' element={<Error/>} />
