@@ -4,7 +4,7 @@ import Footer from './components/Footer';
 
 function App() {
   return (
-    <div className="App flex flex-col justify-between">
+    <div className="App flex flex-col justify-between font-work">
         <Container/>
         <Footer/>
     </div>
