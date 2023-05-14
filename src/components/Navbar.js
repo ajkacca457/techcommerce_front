@@ -8,14 +8,14 @@ const Navbar = () => {
 
   return (
     <div>
-        <ul className='bg-red-500 py-8 px-4 flex justify-around'>
-            <NavLink to="/">Home</NavLink>
-            <NavLink to="about">About</NavLink>
-            <NavLink to="products">Products</NavLink>
-            <NavLink to="cart" className="flex">Cart <RiShoppingCart2Fill size={30} className="ml-3"/></NavLink>
-            {myUser && <NavLink to="checkout">Checkout</NavLink>}
+        <ul className='py-2 px-4 flex justify-around w-1/2 mx-auto'>
+            <NavLink to="/">HOME</NavLink>
+            <NavLink to="about">ABOUT</NavLink>
+            <NavLink to="products">PRODUCTS</NavLink>
+            <NavLink to="cart" className="flex">CART <RiShoppingCart2Fill size={20} className="ml-1"/></NavLink>
+            {myUser && <NavLink to="checkout">CHECKOUT</NavLink>}
             {myUser?<button className='flex items-center border-2 border-gray-500 px-2 py-1' onClick={(e)=>{logout({returnTo:window.location.origin})}}><RiLogoutCircleLine size={20}/>Logout</button>:
-            <button className='flex items-center border-2 border-gray-500 px-2 py-1' onClick={loginWithRedirect}><RiLoginCircleLine size={20}/>Login</button>
+            <button className='flex items-center border-0 px-2 py-1' onClick={loginWithRedirect}>LOGIN<RiLoginCircleLine size={20} className='ml-1'/></button>
             }            
         </ul>
     </div>
