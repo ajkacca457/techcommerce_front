@@ -8,7 +8,7 @@ const Navbar = () => {
 
   return (
     <div>
-        <ul className='bg-red-300 py-8 px-4 flex justify-around'>
+        <ul className='bg-red-500 py-8 px-4 flex justify-around'>
             <NavLink to="/">Home</NavLink>
             <NavLink to="about">About</NavLink>
             <NavLink to="products">Products</NavLink>
