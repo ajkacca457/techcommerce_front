@@ -7,6 +7,9 @@ module.exports = {
       fontFamily: {
         work: ['Work Sans', "sans-serif"],
        },
+       maxWidth: {
+				'content': '1280px',
+			},
     },
   },
   plugins: [],

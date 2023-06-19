@@ -4,7 +4,7 @@ import Navbar from './Navbar'
 
 const Container = () => {
   return (
-    <div class="max-w-[1200px] mx-auto">  
+    <div class="max-w-content mx-auto">  
       <Navbar/>
       <AppRoutes/>
     </div>

@@ -4,7 +4,7 @@ import Hero from '../components/Hero'
 const About = () => {
   return (
     <>
-    <Hero align="left"/>
+    <Hero/>
     </>
   )
 }
