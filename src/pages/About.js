@@ -3,9 +3,9 @@ import Hero from '../components/Hero'
 
 const About = () => {
   return (
-    <>
-    <Hero/>
-    </>
+    <div className='max-w-content mx-auto'>
+      <Hero/>
+    </div>
   )
 }
 

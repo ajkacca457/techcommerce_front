@@ -5,7 +5,7 @@ import Featured from '../components/Featured';
 
 const Home = () => {
   return (
-    <div className='w-full'>
+    <div className='max-w-content mx-auto'>
       <Hero/>
       <Featured/>
       <Services/>
