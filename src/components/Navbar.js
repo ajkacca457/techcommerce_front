@@ -15,8 +15,8 @@ const Navbar = () => {
             <NavLink to="products">PRODUCTS</NavLink>
             <NavLink to="cart" className="flex">CART</NavLink>
             {myUser && <NavLink to="checkout">CHECKOUT</NavLink>}
-            {myUser?<button className='flex items-center border-2 border-gray-500 px-2 py-1' onClick={(e)=>{logout({returnTo:window.location.origin})}}><RiLogoutCircleLine size={20}/>Logout</button>:
-            <button className='flex items-center border-0 px-2 py-1' onClick={loginWithRedirect}>LOGIN<RiLoginCircleLine size={20} className='ml-1'/></button>
+            {myUser?<button className='flex items-center border-2 border-gray-500 px-2' onClick={(e)=>{logout({returnTo:window.location.origin})}}><RiLogoutCircleLine size={20}/>Logout</button>:
+            <button className='flex items-center border-0 px-2' onClick={loginWithRedirect}>LOGIN<RiLoginCircleLine size={20} className='ml-1'/></button>
             }            
         </ul>
     </div>
