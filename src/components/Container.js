@@ -4,9 +4,10 @@ import Navbar from './Navbar'
 
 const Container = () => {
   return (
-    <>  <Navbar/>
-        <AppRoutes/>
-    </>
+    <div class="max-w-[1200px] mx-auto">  
+      <Navbar/>
+      <AppRoutes/>
+    </div>
   )
 }
 
