@@ -3,11 +3,13 @@ import { NavLink } from 'react-router-dom';
 
 const FeaturedCard = ({id,Name,Price,Image}) => {
   return (
-    <div className='col-span-2'>
-        <img src={Image[0].url} alt={Name} className='w-[150px] h-[100px]' />
-        <h3>{Name}</h3>
-        <p>{Price}</p>
-        <NavLink to={`/products/${id}`}>See More</NavLink>
+    <div className='col-span-2 flex flex-col justify-between items-center group'>
+      <div className="h-[300px] bg-center bg-[length:50%] w-2/3 bg-no-repeat transition duration-300 group-hover:scale-150" style={{backgroundImage:`url(${Image[0].url})`}}></div>
+        <div className='text-left'>
+          <h3 className='uppercase text-sm font-semibold'>{Name}</h3>
+          <p className='my-2 text-center'>{Price}$</p>
+          <NavLink to={`/products/${id}`} className="bg-orange-400 uppercase px-3 py-2 block w-fit mx-auto rounded transition duration-300 hover:bg-orange-600">See Product</NavLink>
+        </div>
     </div>
   )
 }

@@ -8,7 +8,7 @@ const Navbar = () => {
 
   return (
     <div>
-      <h1 className='text-4xl my-8'>TECH-COMMERCE</h1>
+      <h1 className='text-3xl font-semibold my-6'>TECH-COMMERCE</h1>
         <ul className='py-2 px-4 flex text-sm justify-around w-1/2 mx-auto'>
             <NavLink to="/">HOME</NavLink>
             <NavLink to="about">ABOUT</NavLink>

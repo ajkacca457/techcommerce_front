@@ -17,7 +17,7 @@ const Featured = () => {
     )
   }
   return (
-    <div className='grid grid-cols-6 gap-x-[10px]'>
+    <div className='grid grid-cols-6 gap-x-[10px] mt-20'>
         {featured.slice(0,3).map((item)=>{
           return <FeaturedCard key={item.id} {...item}/>
         })}
