@@ -18,9 +18,12 @@ const Featured = () => {
   }
   return (
     <div className='grid grid-cols-6 gap-x-[10px] mt-20'>
-        {featured.slice(0,3).map((item)=>{
-          return <FeaturedCard key={item.id} {...item}/>
-        })}
+      <div className='col-span-full'>
+        <h1 className='w-fit mx-auto py-2 px-4 uppercase text-2xl bg-slate-300'>Featured Techs</h1>
+      </div>
+      {featured.slice(0,3).map((item)=>{
+        return <FeaturedCard key={item.id} {...item}/>
+      })}
     </div>
   )
 }
