@@ -6,9 +6,15 @@ import HeroImg from "../images/hero1.jpg"
 
 
 const Home = () => {
+
+  const details= {
+    heading:"A shop for your Tech",
+    description:"Tech-commerce promises best deals, best prices and best service" 
+  };
+
   return (
     <div className='max-w-content mx-auto'>
-      <Hero image={HeroImg}/>
+      <Hero image={HeroImg} details={details}/>
       <Featured/>
       <Services/>
     </div>
