@@ -1,16 +1,14 @@
 import React from 'react'
-import HeroImg from "../images/hero1.jpg"
 
-const Hero = () => {
+const Hero = ({image}) => {
   return (
-    <div className='flex flex-col justify-center bg-center bg-cover min-h-[70vh] my-8' style={{backgroundImage:`url(${HeroImg})`}}>
-      <div></div>
-      <div className='text-white w-1/2 mx-auto'>
-        <h3 className='text-5xl uppercase'> Here will be subheading</h3>
-        <h1>Heading</h1>
+    <div className='flex flex-col justify-center bg-center bg-cover min-h-[70vh] my-12 relative' style={{backgroundImage:`url(${image})`}}>
+      <div className='w-full h-full bg-black absolute top-0 left-0 opacity-50 z-0'></div>
+      <div className='text-white w-1/2 mx-auto z-10'>
+        <h3 className='text-3xl uppercase'> Here will be subheading</h3>
         <p>All description</p>
         <h3>Price in $</h3>
-        <button className='bg-orange-400 px-3 py-1 text-white'>Add to cart</button>
+        <button className='bg-orange-400 px-3 py-1 text-white rounded'>Add to cart</button>
       </div> 
     </div> 
     
