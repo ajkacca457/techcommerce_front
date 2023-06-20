@@ -15,7 +15,7 @@ const Sorting = () => {
           {filtered_products.length} products found
         </div>
         <form className='col-span-2'>
-          <select name="sort" id="sort" value={sort} onChange={sortUpdate} className='w-full'>
+          <select name="sort" id="sort" value={sort} onChange={sortUpdate} className='w-full rounded'>
             <option value="price-lowest">price-lowest</option>
             <option value="price-highest">price-highest</option>
             <option value="name-a">name(a-z)</option>
