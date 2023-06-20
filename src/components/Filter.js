@@ -9,8 +9,8 @@ const Filter = () => {
 
   return (
     <>
-      <form onSubmit={(e)=> e.preventDefault()}>
-        <div className="form-group my-4">
+      <form onSubmit={(e)=> e.preventDefault()} className='mt-8'>
+        <div className="form-group mb-4">
           <label htmlFor="searchtext">Search Products</label>
           <input type="text" name="searchtext" className='border-2 border-slate-300' value={searchtext} onChange={updateFilters}/>
         </div>

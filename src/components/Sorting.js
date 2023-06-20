@@ -1,15 +1,16 @@
 import React from 'react'
-import {BsFillGrid1X2Fill, BsListUl} from 'react-icons/bs';
+import {BsFillGrid1X2Fill} from 'react-icons/bs';
+import {GoListUnordered} from 'react-icons/go';
 import { useFilterContext } from '../context/FilterContext';
 
 const Sorting = () => {
-    const {filtered_products,changeDisplayList,changeDisplayGrid,sort,sortUpdate}=useFilterContext();
+    const {filtered_products,changeDisplayList,changeDisplayGrid,sort,sortUpdate, list_view}=useFilterContext();
 
   return (
-    <div className='bg-orange-300 grid grid-cols-6'>
-        <div className='col-span-2 flex gap-x-[10px]'>
-            <BsFillGrid1X2Fill size={25} onClick={changeDisplayGrid}/>
-            <BsListUl size={25} onClick={changeDisplayList}/> 
+    <div className='grid grid-cols-6 mt-8 place-items-center bg-slate-400  py-2 rounded'>
+        <div className='col-span-2 flex gap-x-[10px] items-center'>
+            <BsFillGrid1X2Fill size={20} onClick={changeDisplayGrid} className={!list_view?`text-white border-[1px]`: `text-black border-[1px] border-black`} />
+            <GoListUnordered size={20} onClick={changeDisplayList} className={list_view?`text-white border-[1px]`: `text-black border-[1px] border-black`}/> 
         </div>
         <div className='col-span-2'>
           {filtered_products.length} products found
