@@ -25,23 +25,25 @@ const SingleProduct = () => {
     if(fields) {
       const {Category,Company,Description,Featured,FreeShipping,Image,Name,Price,Rating,Stock}=fields;
     return (
-    <div className='grid grid-cols-2 gap-x-4 max-w-content mx-auto place-items-center mt-16 mb-12'>
+    <div className='min-h-[80vh] flex flex-col justify-center'>
+    <div className='grid grid-cols-2 gap-x-4 max-w-content mx-auto place-items-center'>
       <div className='col-span-1'>
         {Image.map((item,index)=> {
-          return(<img src={item.url} key={index} className='w-full'/>)
+          return(<img src={item.url} key={index} className='w-1/2 mx-auto'/>)
         })}
       </div>
       <div>
-        <h3>{Name}</h3>
-        <p>{Description}</p>
-        <p>{Category}</p>
-        <p>{Company}</p>
+        <h3 className='text-xl font-semibold border-b-[1px] pb-2'>{Name}</h3>
+        <p className='text-sm my-6 border-b-[1px] pb-6'>{Description}</p>
+        <p className='text-sm my-2'>Gadget type: <span className='bg-slate-500 px-2 py-1 text-white rounded'>{Category}</span></p>
+        <p className='text-sm my-2'>Producer: {Company}</p>
         <p>{Featured && "Featured Product"}</p>
         <p>{FreeShipping && "Free Shipping Available"}</p>
         <p>{Price}</p>
         <p>{Rating}</p>
         <div>{Stock>0 ? <AddToCart item={{Stock,productid,fields}}/>:"No Available stock"}</div> 
       </div>
+    </div>
     </div>
   )
 }
