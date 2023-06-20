@@ -25,19 +25,23 @@ const SingleProduct = () => {
     if(fields) {
       const {Category,Company,Description,Featured,FreeShipping,Image,Name,Price,Rating,Stock}=fields;
     return (
-    <div>
-      {Image.map((item,index)=> {
-        return(<img src={item.url} key={index}  className="w-[150px] h-[100px]"/>)
-      })}
-      <h3>{Name}</h3>
-      <p>{Description}</p>
-      <p>{Category}</p>
-      <p>{Company}</p>
-      <p>{Featured && "Featured Product"}</p>
-      <p>{FreeShipping && "Free Shipping Available"}</p>
-      <p>{Price}</p>
-      <p>{Rating}</p>
-      <div>{Stock>0 ? <AddToCart item={{Stock,productid,fields}}/>:"No Available stock"}</div> 
+    <div className='grid grid-cols-2 gap-x-4 max-w-content mx-auto place-items-center mt-16 mb-12'>
+      <div className='col-span-1'>
+        {Image.map((item,index)=> {
+          return(<img src={item.url} key={index} className='w-full'/>)
+        })}
+      </div>
+      <div>
+        <h3>{Name}</h3>
+        <p>{Description}</p>
+        <p>{Category}</p>
+        <p>{Company}</p>
+        <p>{Featured && "Featured Product"}</p>
+        <p>{FreeShipping && "Free Shipping Available"}</p>
+        <p>{Price}</p>
+        <p>{Rating}</p>
+        <div>{Stock>0 ? <AddToCart item={{Stock,productid,fields}}/>:"No Available stock"}</div> 
+      </div>
     </div>
   )
 }
