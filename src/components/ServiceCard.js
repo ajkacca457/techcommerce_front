@@ -2,9 +2,9 @@ import React from 'react'
 
 const ServiceCard = ({icon,info}) => {
   return (
-    <div className='col-span-2'>
-        {icon}
-        <p>{info}</p>
+    <div className='col-start-2 col-span-4 flex items-center gap-x-[1rem] my-4 rounded px-4 border-[1px] border-slate-300 bg-slate-200'>
+        <div>{icon}</div>
+        <p className='text-left uppercase p-4'>{info}</p>
     </div>
   )
 }

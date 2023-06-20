@@ -8,7 +8,7 @@ const Hero = ({image, details:{heading="Demo Text",description="Demo Text"}}) =>
       <div className='text-white w-1/2 mx-auto z-10'>
         <h3 className='text-4xl uppercase'> {heading}</h3>
         <p className='my-6'>{description}</p>
-        <NavLink to="/products" className="bg-orange-400 uppercase px-3 py-2 block w-fit mx-auto rounded transition duration-300 hover:bg-orange-600">See products</NavLink>
+        <NavLink to="/products" className="bg-sky-800 uppercase px-3 py-2 block w-fit mx-auto rounded transition duration-300 hover:bg-sky-700">See products</NavLink>
       </div> 
     </div> 
     
