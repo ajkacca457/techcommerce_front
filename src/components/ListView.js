@@ -3,7 +3,7 @@ import { NavLink } from 'react-router-dom'
 
 const ListView = ({products}) => {
   if(products.length<=0) {
-    return <h1>Sorry.. no products available..</h1>
+    return <h1 className='text-sm my-4 text-red-700'>No products available with these specifications..</h1>
   }
   
   return (
