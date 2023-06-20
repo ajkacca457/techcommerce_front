@@ -25,7 +25,7 @@ const Services = () => {
   return (
     <div className='grid grid-cols-6 gap-x-4 my-20'>
         <div className='col-span-full'>
-            <h1 className='w-fit mx-auto py-2 px-4 uppercase text-lg bg-slate-300 mb-12'>Services</h1>
+            <h1 className='w-fit mx-auto py-1 px-2 rounded uppercase text-sm bg-slate-600 text-white mb-12'>Services</h1>
         </div>
         {services.map(item=> {
             return(
