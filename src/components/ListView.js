@@ -10,14 +10,16 @@ const ListView = ({products}) => {
     <div>
        {products && products.map((item)=>{
         return(
-            <div className='flex my-4 gap-x-[10px]' key={item.id}>
-            <img src={item.Image[0].url} className="w-[150px] h-[100px]"/>
-            <div>
+            <div className='grid grid-cols-3 gap-x-[10px] border-[1px] border-slate-300 my-8 p-4 items-center group' key={item.id}>
+              <img src={item.Image[0].url} className="w-[150px] max-h-[100px] col-span-1 justify-self-center transition duration-300 group-hover:scale-125"/>
+              <div className='text-left col-span-1 text-sm'>
                 <p>{item.Name}</p>
                 <p>{item.Company}</p>
                 <p>{item.Price}</p>
-                <NavLink to={`/products/${item.id}`}>See More</NavLink>    
-            </div>
+              </div>
+              <div className='col-span-1 justify-self-end'>
+                <NavLink to={`/products/${item.id}`} className="bg-sky-700 uppercase px-2 py-1 block w-fit my-4 text-white text-sm rounded transition duration-300 hover:bg-sky-800">See Product</NavLink>    
+              </div>
             </div>
         )
        })}     

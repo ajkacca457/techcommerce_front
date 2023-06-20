@@ -13,7 +13,7 @@ const Home = () => {
   };
 
   return (
-    <div className='max-w-content mx-auto'>
+    <div className='max-w-content mx-auto px-8'>
       <Hero image={HeroImg} details={details}/>
       <Featured/>
       <Services/>

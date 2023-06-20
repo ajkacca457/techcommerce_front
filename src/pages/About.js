@@ -9,7 +9,7 @@ const About = () => {
     description:"Tech-commerce promises best deals, best prices and best service" 
   };
   return (
-    <div className='max-w-content mx-auto'>
+    <div className='max-w-content mx-auto px-8'>
       <Hero image={HeroImg2} details={details}/>
       <div>
         <h1 className='rounded uppercase mb-8 text-left text-2xl border-b-2 pb-2'>About us</h1>
