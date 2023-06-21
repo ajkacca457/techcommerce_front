@@ -16,21 +16,21 @@ const Cart = () => {
  }
 
   return (
-    <div className='max-w-content mx-auto'>
+    <div className='max-w-content mx-auto px-8'>
         {cart_products.map((item)=>{
             return (
                <CartItem {...item} key={item.productid}/> 
             )
         })}
 
-        <div className='w-[50%] bg-purple-300 p-4 mx-auto my-8'>
+        <div className='bg-slate-800 p-4 mx-auto my-8'>
             <div className='flex justify-between my-2'>
                 <NavLink to="/products" className="bg-orange-600 text-white px-2 py-1">Continue shopping</NavLink>   
                 <button className='bg-black text-white px-2 py-1' onClick={clearCart}>Clear Cart</button>
             </div>
 
             <div>
-                <h3>Total: {total_amount}</h3>
+                <h3 className='uppercase text-white text-xl'>Total: {total_amount}€</h3>
             </div>
 
         </div>

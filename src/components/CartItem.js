@@ -19,7 +19,7 @@ const CartItem = ({name,image,amount,price,productid}) => {
             {amount*price}€
         </div>
 
-        <button className='bg-red-600 text-white h-fit w-fit px-2 py-1 col-span-1 justify-self-center text-sm uppercase' onClick={(e)=>{removeItemFromCart(productid)}} >Delete</button>
+        <button className='bg-red-800 uppercase px-2 py-1 block w-fit mx-auto text-white text-sm rounded transition duration-300 hover:bg-red-600' onClick={(e)=>{removeItemFromCart(productid)}} >Delete</button>
 
     </div>
   )
