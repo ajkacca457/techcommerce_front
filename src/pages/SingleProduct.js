@@ -30,7 +30,7 @@ const SingleProduct = () => {
     <div className='grid grid-cols-2 gap-x-4 max-w-content mx-auto place-items-center'>
       <div className='col-span-1'>
         {Image.map((item,index)=> {
-          return(<img src={item.url} key={index} className='w-1/2 mx-auto'/>)
+          return(<img src={item.url} key={index} className='w-1/2 mx-auto' alt={Name}/>)
         })}
       </div>
       <div>
@@ -40,7 +40,7 @@ const SingleProduct = () => {
         <p className='text-sm my-2'>Producer: {Company}</p>
         <p className='text-sm my-2'>{Featured && "Featured Product"}</p>
         <p className='text-sm my-2'>{FreeShipping && "Free Shipping Available"}</p>
-        <p className='text-sm my-2'>{Price}</p>
+        <p className='text-xl my-2'>{Price}€</p>
         <RatingView rating={Rating}/>
         <div>{Stock>0 ? <AddToCart item={{Stock,productid,fields}}/>:"No Available stock"}</div> 
       </div>
