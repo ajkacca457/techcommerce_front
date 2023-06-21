@@ -29,7 +29,7 @@ const MobileNav = () => {
             <NavLink to="about" className=" block transition duration-300 hover:scale-[110%] my-3" onClick={toggleNav}>ABOUT</NavLink>
             <NavLink to="products" className=" block transition duration-300 hover:scale-[110%] my-3" onClick={toggleNav}>PRODUCTS</NavLink>
             <NavLink to="cart" className="block transition duration-300 hover:scale-[110%] my-3" onClick={toggleNav}>CART({cart_products.length}) </NavLink>
-            {myUser && <NavLink to="checkout" className="flex transition duration-300 hover:scale-[110%] my-3" onClick={toggleNav}>CHECKOUT</NavLink>}
+            {myUser && <NavLink to="checkout" className="block transition duration-300 hover:scale-[110%] my-3" onClick={toggleNav}>CHECKOUT</NavLink>}
             {myUser?<button className='mx-auto w-fit px-2 transition duration-300 hover:scale-[110%] flex my-3' onClick={(e)=>{logout({returnTo:window.location.origin});toggleNav()}}><RiLogoutCircleLine size={20}/>Logout</button>:
             <button className='mx-auto w-fit px-2 transition duration-300 hover:scale-[110%] flex my-3' onClick={loginWithRedirect}>LOGIN<RiLoginCircleLine size={20} className='ml-1'/></button>
             }            
