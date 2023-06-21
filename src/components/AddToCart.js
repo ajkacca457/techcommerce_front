@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import {TbSquareMinus,TbSquarePlus} from "react-icons/tb"
+import {HiOutlinePlus,HiOutlineMinus} from "react-icons/hi"
 import {GrAddCircle} from "react-icons/gr"
 import { useCartContext } from '../context/CartContext'
 import { NavLink } from 'react-router-dom'
@@ -29,10 +29,10 @@ const AddToCart = ({item:{Stock,productid,fields}}) => {
     }
   return (
     <div>
-    <div className='flex w-full bg-sky-400 justify-center items-center my-4 py-2'>
-        <TbSquareMinus size={25} onClick={decrease}/>
-        <p className='text-[150%]'>{amount}</p>
-        <TbSquarePlus size={25} onClick={increase}/>
+    <div className='flex w-full justify-center items-center my-4 py-2 gap-x-4'>
+        <HiOutlineMinus size={15} onClick={decrease}/>
+        <p className='text-lg'>{amount}</p>
+        <HiOutlinePlus size={15} onClick={increase}/>
     </div>
 
     <NavLink to="/cart" className='bg-orange-600 text-white flex mx-auto px-2 py-1 rounded-md my-2 w-fit h-fit' onClick={(e)=>{addItemsToCart(productid,amount,fields)}}>
