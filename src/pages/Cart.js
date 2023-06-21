@@ -24,9 +24,9 @@ const Cart = () => {
         })}
 
         <div className='bg-slate-800 p-4 mx-auto my-8'>
-            <div className='flex justify-between my-2'>
-                <NavLink to="/products" className="bg-sky-700 uppercase px-2 py-1 block w-fit text-white text-sm rounded transition duration-300 hover:bg-sky-800">Continue shopping</NavLink>   
-                <button className='bg-red-800 uppercase px-2 py-1 block w-fit text-white text-sm rounded transition duration-300 hover:bg-red-600' onClick={clearCart}>Clear Cart</button>
+            <div className='block md:flex md:justify-between my-2'>
+                <NavLink to="/products" className="mx-auto bg-sky-700 uppercase px-2 py-1 block w-fit text-white text-sm rounded transition duration-300 hover:bg-sky-800">Continue shopping</NavLink>   
+                <button className='my-4 md:my-0 mx-auto bg-red-800 uppercase px-2 py-1 block w-fit text-white text-sm rounded transition duration-300 hover:bg-red-600' onClick={clearCart}>Clear Cart</button>
             </div>
 
             <div>
