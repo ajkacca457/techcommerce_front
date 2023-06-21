@@ -26,7 +26,7 @@ const SingleProduct = () => {
     if(fields) {
       const {Category,Company,Description,Featured,FreeShipping,Image,Name,Price,Rating,Stock}=fields;
     return (
-    <div className='min-h-[80vh] flex flex-col justify-center px-8 my-10'>
+    <div className='min-h-[80vh] flex flex-col justify-center px-8 mt-[80px] mb-10 md:my-10'>
     <div className='grid grid-cols-2 gap-x-4 max-w-content mx-auto place-items-center'>
       <div className='col-span-full md:col-span-1'>
         {Image.map((item,index)=> {

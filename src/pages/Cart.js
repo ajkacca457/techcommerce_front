@@ -16,14 +16,14 @@ const Cart = () => {
  }
 
   return (
-    <div className='max-w-content mx-auto px-8'>
+    <div className='max-w-content mx-auto px-8  mt-[80px] md:mt-0'>
         {cart_products.map((item)=>{
             return (
                <CartItem {...item} key={item.productid}/> 
             )
         })}
 
-        <div className='bg-slate-800 p-4 mx-auto my-8'>
+        <div className='bg-slate-800 p-4 mx-auto md:my-8'>
             <div className='block md:flex md:justify-between my-2'>
                 <NavLink to="/products" className="mx-auto bg-sky-700 uppercase px-2 py-1 block w-fit text-white text-sm rounded transition duration-300 hover:bg-sky-800">Continue shopping</NavLink>   
                 <button className='my-4 md:my-0 mx-auto bg-red-800 uppercase px-2 py-1 block w-fit text-white text-sm rounded transition duration-300 hover:bg-red-600' onClick={clearCart}>Clear Cart</button>

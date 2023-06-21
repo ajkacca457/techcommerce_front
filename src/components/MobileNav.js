@@ -16,15 +16,15 @@ const MobileNav = () => {
   }
 
   return (
-    <div className='md:hidden px-8'>
-        <div className='flex justify-between items-center border-b-[1px]'>
-            <h1 className='text-xl font-semibold my-6'>TECH-COMMERCE</h1>
+    <div className='fixed top-0 left-0 h-auto w-full z-20 md:hidden px-8 bg-black'>
+        <div className='flex justify-between items-center'>
+            <h1 className='text-xl font-semibold my-4 text-white'>TECH-COMMERCE</h1>
             <div onClick={toggleNav}>
-               {navopen?<AiOutlineClose/>:<GiHamburgerMenu/>}  
+               {navopen?<AiOutlineClose className='text-white'/>:<GiHamburgerMenu className='text-white'/>}  
             </div>
         </div>
       
-        <ul className={navopen?'py-2 px-4 text-sm h-full transition-height duration-300 ease-out opacity-100':'h-0 overflow-hidden transition-all duration-300 ease-in opacity-0'}>
+        <ul className={navopen?'py-6 px-4 text-sm h-full transition-height duration-300 ease-out opacity-100 text-white':'h-0 overflow-hidden transition-all duration-300 ease-in opacity-0'}>
             <NavLink to="/" className="block transition duration-300 hover:scale-[110%] my-3" onClick={toggleNav}>HOME</NavLink>
             <NavLink to="about" className=" block transition duration-300 hover:scale-[110%] my-3" onClick={toggleNav}>ABOUT</NavLink>
             <NavLink to="products" className=" block transition duration-300 hover:scale-[110%] my-3" onClick={toggleNav}>PRODUCTS</NavLink>

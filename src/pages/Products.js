@@ -16,7 +16,7 @@ const Products = () => {
   }
 
   return (
-    <div className='grid grid-cols-5 gap-x-8 max-w-content mx-auto px-8'>
+    <div className='grid grid-cols-5 gap-x-8 max-w-content mx-auto px-8  mt-[80px] md:mt-0'>
       <Filter/>
       <div className='col-span-full md:col-span-4'>
         <Sorting/>
