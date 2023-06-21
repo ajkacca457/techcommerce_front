@@ -9,7 +9,7 @@ const Filter = () => {
 
   return (
     <>
-      <form onSubmit={(e)=> e.preventDefault()} className='mt-8'>
+      <form onSubmit={(e)=> e.preventDefault()} className='mt-8 col-span-full md:col-span-1'>
         <div className="form-group mb-4">
           <label htmlFor="searchtext" className='text-sm'>Search Products</label>
           <input type="text" name="searchtext" className='border-[1px] rounded border-slate-300 w-full px-2' value={searchtext} onChange={updateFilters}/>
@@ -33,7 +33,7 @@ const Filter = () => {
           </select>
         </div>
 
-        <div className="form-group my-4">
+        <div className="form-group my-4 flex gap-x-4 md:block justify-center">
           <label htmlFor="price" className='text-sm'>Current price ${price}</label>
           <input type="range" name="price" value={price} min={minPrice} max={maxPrice} onChange={updateFilters} />
         </div>
