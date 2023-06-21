@@ -9,7 +9,7 @@ const Navbar = () => {
   const {cart_products}= useCartContext();
 
   return (
-    <div>
+    <div className='hidden md:block'>
       <h1 className='text-3xl font-semibold my-6'>TECH-COMMERCE</h1>
         <ul className='py-2 px-4 flex text-sm justify-center gap-x-8 w-1/2 mx-auto border-b-2 pb-4'>
             <NavLink to="/" className="transition duration-300 hover:scale-125">HOME</NavLink>
