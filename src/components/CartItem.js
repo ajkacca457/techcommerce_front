@@ -1,5 +1,7 @@
 import React from 'react'
 import { useCartContext } from '../context/CartContext'
+import {BsBasket} from "react-icons/bs";
+
 const CartItem = ({name,image,amount,price,productid}) => {
     const {removeItemFromCart}= useCartContext();
   return (
@@ -9,8 +11,8 @@ const CartItem = ({name,image,amount,price,productid}) => {
             <h3>{name}</h3>
         </div>   
 
-        <div className='col-span-1 justify-self-center text-sm uppercase'>
-            <h3>Number of Items</h3>
+        <div className='col-span-1 justify-self-center text-sm uppercase group'>
+            <div className='flex gap-x-1'><BsBasket className='group-hover:animate-jump'/> <h3>Number of Items</h3></div>
             <p>{amount}</p>
         </div>
 
