@@ -8,9 +8,9 @@ const Cart = () => {
 
  if(cart_products.length<=0) {
     return ( 
-    <div>
-        <h3>There are no products in the cart.</h3>
-        <NavLink to="/products" className="bg-orange-600 px-2 py-1 text-white">Add Items</NavLink> 
+    <div className='max-w-content mx-auto px-8 my-8'>
+        <h3 className='my-4'>There are no products in the cart.</h3>
+        <NavLink to="/products" className="bg-sky-700 uppercase px-2 py-1 mx-auto block w-fit text-white text-sm rounded transition duration-300 hover:bg-sky-800">Add Items</NavLink> 
     </div>
     )
  }
@@ -25,8 +25,8 @@ const Cart = () => {
 
         <div className='bg-slate-800 p-4 mx-auto my-8'>
             <div className='flex justify-between my-2'>
-                <NavLink to="/products" className="bg-orange-600 text-white px-2 py-1">Continue shopping</NavLink>   
-                <button className='bg-black text-white px-2 py-1' onClick={clearCart}>Clear Cart</button>
+                <NavLink to="/products" className="bg-sky-700 uppercase px-2 py-1 block w-fit text-white text-sm rounded transition duration-300 hover:bg-sky-800">Continue shopping</NavLink>   
+                <button className='bg-red-800 uppercase px-2 py-1 block w-fit text-white text-sm rounded transition duration-300 hover:bg-red-600' onClick={clearCart}>Clear Cart</button>
             </div>
 
             <div>
