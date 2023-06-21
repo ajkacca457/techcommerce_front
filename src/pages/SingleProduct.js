@@ -4,6 +4,7 @@ import Loading from "../components/Loading"
 import {useProductContext} from "../context/ProductContext";
 import  {BaseURL} from "../utils/utils";
 import AddToCart from '../components/AddToCart';
+import RatingView from '../components/RatingView';
 
 const SingleProduct = () => {
     
@@ -37,10 +38,10 @@ const SingleProduct = () => {
         <p className='text-sm my-6 border-b-[1px] pb-6'>{Description}</p>
         <p className='text-sm my-2'>Gadget type: <span className='bg-slate-500 px-2 py-1 text-white rounded'>{Category}</span></p>
         <p className='text-sm my-2'>Producer: {Company}</p>
-        <p>{Featured && "Featured Product"}</p>
-        <p>{FreeShipping && "Free Shipping Available"}</p>
-        <p>{Price}</p>
-        <p>{Rating}</p>
+        <p className='text-sm my-2'>{Featured && "Featured Product"}</p>
+        <p className='text-sm my-2'>{FreeShipping && "Free Shipping Available"}</p>
+        <p className='text-sm my-2'>{Price}</p>
+        <RatingView rating={Rating}/>
         <div>{Stock>0 ? <AddToCart item={{Stock,productid,fields}}/>:"No Available stock"}</div> 
       </div>
     </div>
