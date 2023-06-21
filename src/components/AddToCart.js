@@ -29,14 +29,14 @@ const AddToCart = ({item:{Stock,productid,fields}}) => {
     }
   return (
     <div>
-    <div className='flex w-full justify-center items-center my-4 py-2 gap-x-4'>
+    <div className='flex w-full justify-center items-center my-2 py-2 gap-x-4'>
         <HiOutlineMinus size={15} onClick={decrease}/>
         <p className='text-lg'>{amount}</p>
         <HiOutlinePlus size={15} onClick={increase}/>
     </div>
 
-    <NavLink to="/cart" className='bg-orange-600 text-white flex mx-auto px-2 py-1 rounded-md my-2 w-fit h-fit' onClick={(e)=>{addItemsToCart(productid,amount,fields)}}>
-        <GrAddCircle size={25} className="text-white mr-2"/> Add to cart
+    <NavLink to="/cart" className='bg-sky-700 uppercase px-2 py-1 block w-fit mx-auto text-white text-sm rounded transition duration-300 hover:bg-sky-800' onClick={(e)=>{addItemsToCart(productid,amount,fields)}}>
+     Add to cart
     </NavLink>
     
     </div>
