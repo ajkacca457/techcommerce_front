@@ -8,7 +8,7 @@ const Cart = () => {
 
  if(cart_products.length<=0) {
     return ( 
-    <div className='max-w-content mx-auto px-8 my-8'>
+    <div className='max-w-content mx-auto px-8 mt-[80px] md:my-8'>
         <h3 className='my-4'>There are no products in the cart.</h3>
         <NavLink to="/products" className="bg-sky-700 uppercase px-2 py-1 mx-auto block w-fit text-white text-sm rounded transition duration-300 hover:bg-sky-800">Add Items</NavLink> 
     </div>
