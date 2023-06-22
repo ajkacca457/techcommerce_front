@@ -1,70 +1,196 @@
-# Getting Started with Create React App
+# TECH-COMMERCE
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is a online store for all the latest gadgets. This
 
-## Available Scripts
+## Project Display
 
-In the project directory, you can run:
+![screenshot](./src/images/image-1.jpg)
+\
+\
+![screenshot](./src/images/image-2.jpg)
+\
+\
+![screenshot](./src/images/image-3.jpg)
+\
+\
+![screenshot](./src/images/image-4.jpg)
+\
+\
+![screenshot](./src/images/image-5.jpg)
 
-### `npm start`
+## Live Demo
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+[Course_Tracker]()
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Built With
 
-### `npm test`
+- VsCode
+- React
+- redux toolkit
+- express
+- MongoDB
+- NodeJs
+- Bootstrap
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+# Getting Started
 
-### `npm run build`
+To get a local copy of the repository please run the following commands on your terminal:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```bash
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+$ git clone `https://github.com/ajkacca457/course_tracker_restructure.git`
+$ cd course_tracker_restructure
+$ Run `npm install` to install the necessary modules for server and api.
+$ create config.env file in env folder
+$ Add the following variables in config.env file:
+    - PORT (preferablly 5000 for backend server)
+    - MONGO_URI (own connection string that for mongodb)
+    - JWT_SECRET (it could be anything but it is preferable to use encryption key generator to get a good key)
+    - JWT_EXPIRE (any range from 1h to 1y)
+$ cd client
+$ Run `npm install` to install node modules for front end.
+$ Run `npm run dev` to start server.
+$ Run `npm run start` to start client server.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```
 
-### `npm run eject`
+# Limitations
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- Right now the app doenst have a live link.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+# Testing Project
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+To run test in your terminal:
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+```
+$ No tests available for the backend codebase.
+$ Run `react-scripts test` to run basic tests for front-end
 
-## Learn More
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+# Future development pipeline
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+To run test in your terminal:
 
-### Code Splitting
+- Adding category and timeline based filtering to courses
+- Adding advanced query options
+- Pagination
+- Adding option for user to generate pdf report/sharable link.
+- deploy to live domain
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+# Authors
 
-### Analyzing the Bundle Size
+👤 **Avijit Karmaker**
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+- Github: [@Avijit](https://github.com/ajkacca457)
+- Linkedin: [@Avijit](https://www.linkedin.com/in/avijit-karmaker-8738a54)
 
-### Making a Progressive Web App
+## 🤝 Contributing
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+Contributions, issues and feature requests are welcome!
 
-### Advanced Configuration
+## Show your support
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+Give a ⭐️ if you like this project!
 
-### Deployment
+## Copyright
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+This is a project developed by Avijit.
 
-### `npm run build` fails to minify
+## Project Display
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+![screenshot](./images/image1.jpg)
+\
+\
+![screenshot](./images/image2.jpg)
+\
+\
+![screenshot](./images/image3.jpg)
+\
+\
+![screenshot](./images/image4.jpg)
+\
+\
+![screenshot](./images/image5.jpg)
+\
+\
+![screenshot](./images/image6.jpg)
+
+## Live Demo
+
+[Course_Tracker]()
+
+## Built With
+
+- VsCode
+- React
+- redux toolkit
+- express
+- MongoDB
+- NodeJs
+- Bootstrap
+
+# Getting Started
+
+To get a local copy of the repository please run the following commands on your terminal:
+
+```bash
+
+$ git clone `https://github.com/ajkacca457/course_tracker_restructure.git`
+$ cd course_tracker_restructure
+$ Run `npm install` to install the necessary modules for server and api.
+$ create config.env file in env folder
+$ Add the following variables in config.env file:
+    - PORT (preferablly 5000 for backend server)
+    - MONGO_URI (own connection string that for mongodb)
+    - JWT_SECRET (it could be anything but it is preferable to use encryption key generator to get a good key)
+    - JWT_EXPIRE (any range from 1h to 1y)
+$ cd client
+$ Run `npm install` to install node modules for front end.
+$ Run `npm run dev` to start server.
+$ Run `npm run start` to start client server.
+
+```
+
+# Limitations
+
+- Right now the app doenst have a live link.
+
+# Testing Project
+
+To run test in your terminal:
+
+```
+$ No tests available for the backend codebase.
+$ Run `react-scripts test` to run basic tests for front-end
+
+```
+
+# Future development pipeline
+
+To run test in your terminal:
+
+- Adding category and timeline based filtering to courses
+- Adding advanced query options
+- Pagination
+- Adding option for user to generate pdf report/sharable link.
+- deploy to live domain
+
+# Authors
+
+👤 **Avijit Karmaker**
+
+- Github: [@Avijit](https://github.com/ajkacca457)
+- Linkedin: [@Avijit](https://www.linkedin.com/in/avijit-karmaker-8738a54)
+
+## 🤝 Contributing
+
+Contributions, issues and feature requests are welcome!
+
+## Show your support
+
+Give a ⭐️ if you like this project!
+
+## Copyright
+
+This is a project developed by Avijit.
